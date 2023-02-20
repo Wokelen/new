@@ -1,0 +1,14 @@
+[Unit]
+Description=Flask_app
+After=network.target
+
+[Service]
+WorkingDirectory=/home/serasorb
+ExecStart=/home/serasorb/venv/bin/python app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
+
