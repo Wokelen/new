@@ -1,0 +1,14 @@
+[Unit]
+Description=Flask_app
+After=network.target
+
+[Service]
+WorkingDirectory=/home/serasorb
+ExecStart=/home/serasorb/venv/bin/python -m flask run -h 0.0.0.0 -p 80
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
+
